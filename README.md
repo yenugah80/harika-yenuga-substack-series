@@ -1,93 +1,65 @@
-# The Unnamed Pipeline
+# Harika Yenuga Substack Series
 
-> Practical data science techniques hiding inside real production systems.
+> Companion code for essays, experiments, and production-minded data science notes from my Substack.
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](#)
 [![Tests](https://img.shields.io/badge/tests-pytest-2ecc71?style=for-the-badge)](#)
+[![Substack](https://img.shields.io/badge/Substack-harikayenuga-ff6719?style=for-the-badge&logo=substack&logoColor=white)](https://substack.com/@harikayenuga)
 [![License](https://img.shields.io/badge/license-MIT-f0f6fc?style=for-the-badge)](./LICENSE)
 
-The Unnamed Pipeline is a companion codebase for the
-[Substack series](https://substack.com/@harikayenuga): a collection of field-tested
-statistical methods explained through real business problems.
+This repo is the code home for my personal Substack series:
+small, readable implementations of statistical and AI techniques that show up
+inside real systems.
 
-Each episode starts with a messy industry question, translates it into a
-statistical lens, then ships the working Python: implementation, examples,
-visualizations, tests, and the failure modes worth remembering.
+Each series gets its own folder. Each episode includes working code, a runnable
+demo, visualizations, tests, and notes on where the technique helps or fails.
 
 ```mermaid
 flowchart LR
-    A[Business question] --> B[Statistical method]
-    B --> C[Python implementation]
-    C --> D[Tests and visuals]
-    D --> E[Decision-ready signal]
+    A[Substack essay] --> B[Series folder]
+    B --> C[Episode code]
+    C --> D[Runnable demo]
+    D --> E[Tests and visuals]
 ```
+
+## Series
+
+| Series | Focus | Episodes |
+|--------|-------|----------|
+| [The Unnamed Pipeline](./the-unnamed-pipeline/) | Production data science techniques that textbooks skip | 2 |
 
 ## Episodes
 
-| # | Episode | Real Question | Industry | Code |
-|---|---------|---------------|----------|------|
-| 01 | [Benford's Law](./episode-01-benfords-law/) | Are these numbers too perfect? | Finance, Entertainment, Enterprise | Python |
-| 02 | [Survival Analysis](./episode-02-survival-analysis/) | When will customers churn? | SaaS, Telecom, Insurance, HR | Python |
-
-## What Makes It Different
-
-This is not a notebook graveyard. Each episode is built like a small production
-module:
-
-| Layer | What You Get |
-|-------|--------------|
-| Core logic | Reusable Python functions with clear inputs and outputs |
-| Demo | Synthetic but realistic data and runnable analysis scripts |
-| Visuals | Dark-themed charts designed for explanation and review |
-| Tests | Pytest coverage for expected behavior and edge cases |
-| Readme | Quick start, concepts, limitations, and usage examples |
-
-## Current Map
-
-### Episode 01: Benford's Law
-
-Detect suspicious numeric distributions with first-digit frequency analysis.
-Useful for invoices, ledgers, operational metrics, and any workflow where
-human-shaped numbers can leak into supposedly natural data.
-
-```bash
-cd episode-01-benfords-law
-pip install -r requirements.txt
-python example.py
-python -m pytest tests/ -v
-```
-
-### Episode 02: Survival Analysis in Customer Churn
-
-Model time-to-cancellation instead of flattening churn into yes/no. Includes
-Kaplan-Meier curves, log-rank tests, Cox Proportional Hazards modeling,
-individual survival prediction, and urgent customer flagging.
-
-```bash
-cd episode-02-survival-analysis
-pip install -r requirements.txt
-python example.py
-python -m pytest tests/ -v
-```
+| Series | # | Episode | Real Question | Industry | Code |
+|--------|---|---------|---------------|----------|------|
+| The Unnamed Pipeline | 01 | [Benford's Law](./the-unnamed-pipeline/episode-01-benfords-law/) | Are these numbers too perfect? | Finance, Entertainment, Enterprise | Python |
+| The Unnamed Pipeline | 02 | [Survival Analysis](./the-unnamed-pipeline/episode-02-survival-analysis/) | When will customers churn? | SaaS, Telecom, Insurance, HR | Python |
 
 ## Repository Structure
 
 ```text
-episode-NN-topic/
-|-- README.md          # Episode summary and quick start
-|-- *.py               # Core implementation module
-|-- visualize.py       # Charts and plots
-|-- example.py         # Runnable demo with test cases
-|-- requirements.txt   # Dependencies
-`-- tests/             # Unit tests
+series-name/
+|-- README.md
+`-- episode-NN-topic/
+    |-- README.md          # Episode summary and quick start
+    |-- *.py               # Core implementation module
+    |-- visualize.py       # Charts and plots
+    |-- example.py         # Runnable demo with test cases
+    |-- requirements.txt   # Dependencies
+    `-- tests/             # Unit tests
 ```
 
 ## Design Principles
 
-- **Industry first:** every technique is anchored to a real operating question.
+- **Series first:** the repo can grow with new Substack themes over time.
+- **Industry grounded:** every episode starts from a real operating question.
 - **Code over vibes:** examples must run, tests must pass, outputs must exist.
 - **Failure-aware:** limitations and misleading cases are part of the lesson.
-- **Small enough to read:** each episode is a compact, inspectable module.
+- **Small enough to read:** each episode stays compact and inspectable.
+
+## Substack
+
+Read the essays at [substack.com/@harikayenuga](https://substack.com/@harikayenuga).
 
 ## Author
 

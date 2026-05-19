@@ -240,7 +240,7 @@ def print_report(
             h = hr[feat]
             lo = np.exp(ci.loc[feat, "95% lower-bound"])
             hi = np.exp(ci.loc[feat, "95% upper-bound"])
-            direction = "↑ risk" if h > 1 else "↓ risk"
-            print(f"{feat:<30} {h:>8.3f}  ({lo:.3f}–{hi:.3f})  {direction}")
+            direction = "higher risk" if h > 1 else "lower risk"
+            print(f"{feat:<30} {h:>8.3f}  ({lo:.3f}-{hi:.3f})  {direction}")
 
     print("=" * 60)
