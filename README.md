@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/license-MIT-f0f6fc?style=for-the-badge)](./LICENSE)
 
 The Unnamed Pipeline is a companion codebase for the
-[Substack series](https://substack.com/@yenugah80): a collection of field-tested
+[Substack series](https://substack.com/@harikayenuga): a collection of field-tested
 statistical methods explained through real business problems.
 
 Each episode starts with a messy industry question, translates it into a
